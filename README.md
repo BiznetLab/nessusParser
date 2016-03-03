@@ -1,5 +1,5 @@
 # nessusParser
-# This script has been developed by Behruz Cebiyev
+This script has been developed by Behruz Cebiyev
 
 [ What is this script for? ]
 
