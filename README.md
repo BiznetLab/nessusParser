@@ -1,4 +1,6 @@
 # nessusParser
+# This script has been developed by Behruz Cebiyev
+
 [ What is this script for? ]
 
 If you have a nessus export or multiple nessus exports in csv format, you may need to parse them based on vulnerability IDs.
