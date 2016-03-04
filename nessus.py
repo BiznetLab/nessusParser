@@ -32,6 +32,9 @@ if opts.csv_file is not None:
 				print "\n\n\tSo again, we are parsing our .csv file."
 		
 			print "\n"
+			if not os.path.exists("nessus.sh"):
+                                print "\n\t\'nessus.sh\' is missing. We should have it for the script to work properly.\n"
+                                exit()
 			subprocess.call(["chmod","755","nessus.sh"])
 			subprocess.call(["bash","nessus.sh",opts.csv_file])
 else:
