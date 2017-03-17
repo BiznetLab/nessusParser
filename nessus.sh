@@ -4,6 +4,8 @@ printf "\t";echo \"$1_order.txt\" created.
 
 grep -r '^\"[0-9][0-9][0-9][0-9].*' $1 | awk -F"," '{ print $1,$5,$7 }' > $1_res.txt;
 
+grep "^\"11936\|Remote operating system :" tmp.csv | cut -d"," -f5 | sed 's/^.*: //g' | tr -d "\""  > os_identified.txt 
+
 sed 's/" "/,/g' $1_res.txt | sed 's/"//g' | uniq | sort -g > $1_result.txt;
 
 rm $1_res.txt;
