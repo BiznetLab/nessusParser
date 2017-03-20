@@ -27,13 +27,7 @@ This script works properly with Python2.7.
 
 [ Help Page ]
 
-Usage: nessus.py [options]
-
-Options:
-  -h, --help   show this help message and exit
-  -f CSV_FILE  give the .csv file name
-  -i ID        give the ID of the vulnerability
-  --no-fqdn    don't write domain names to the file
+![alt tag](https://github.com/BiznetLab/nessusParser/blob/master/help.PNG)
   
   
 
