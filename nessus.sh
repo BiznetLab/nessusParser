@@ -4,7 +4,9 @@ printf "\t";echo \"$1_order.txt\" created.
 
 grep -r '^\"[0-9][0-9][0-9][0-9].*' $1 | awk -F"," '{ print $1,$5,$7 }' > $1_res.txt;
 
-grep "^\"11936\|Remote operating system :" $1 | cut -d"," -f5 | sed 's/^.*: //g' | tr -d "\"" | awk 'ORS=NR%2?" - ":"\n"' > $1_os_identified.txt 
+grep "^\"11936\|Remote operating system :" $1 | cut -d"," -f5 | sed 's/^.*: //g' | tr -d "\"" | awk 'ORS=NR%2?" - ":"\n"' > $1_os_identified.txt
+
+grep "^\"10150" -A6 $1 | grep "^\"10150\|Computer name" | cut -d"," -f5 | grep "Computer name" -B1 | grep -v "\-\-" | tr -d "\"" | awk 'ORS=NR%2?" -":"\n"' | sed 's/\s*= Com.*//g' > $1_netbios_names.txt
 
 sed 's/" "/,/g' $1_res.txt | sed 's/"//g' | uniq | sort -g > $1_result.txt;
 
