@@ -33,14 +33,11 @@ This script works properly with Python2.7.
 
 [ Example Usage ]
 
-root@linux:~/nessus# ls
-nessus.py  nessus.sh  test.csv
-
 root@linux:~/nessus# python nessus.py -f test.csv
 			
   [Output has been removed for the sake of neatness]
    
 root@linux:~/nessus# python nessus.py -i 83298 -f test.csv
 	
-  [Output has been removed the sake of neatness]		        
+  [Output has been removed the sake of neatness]	        
    
